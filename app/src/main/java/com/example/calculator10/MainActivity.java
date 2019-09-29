@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 text1.setText(text1.getText() + "0");
                 if(!Double.isNaN(oparant1)) {
-                   f=f+"0";
+                   f=f+'0';
                 }
             }
         });
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 text1.setText(text1.getText() + "1");
                 if(!Double.isNaN(oparant1)) {
-                    f=f+"1";
+                    f=f+'1';
                 }
             }
         });
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 text1.setText(text1.getText() + "2");
                 if(!Double.isNaN(oparant1)) {
-                    f=f+"2";
+                    f=f+'2';
                 }
             }
         });
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 text1.setText(text1.getText() + "3");
                 if(!Double.isNaN(oparant1)) {
-                    f=f+"3";
+                    f=f+'3';
                 }
             }
         });
@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 text1.setText(text1.getText() + "4");
                 if(!Double.isNaN(oparant1)) {
-                    f=f+"4";
+                    f=f+'4';
                 }
             }
         });
@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 text1.setText(text1.getText() + "5");
                 if(!Double.isNaN(oparant1)) {
-                    f=f+"5";
+                    f=f+'5';
                 }
             }
         });
@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 text1.setText(text1.getText() + "6");
                 if(!Double.isNaN(oparant1)) {
-                    f=f+"6";
+                    f=f+'6';
                 }
             }
         });
@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 text1.setText(text1.getText() + "7");
                 if(!Double.isNaN(oparant1)) {
-                    f=f+"7";
+                    f=f+'7';
                 }
             }
         });
@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 text1.setText(text1.getText() + "8");
                 if(!Double.isNaN(oparant1)) {
-                    f=f+"8";
+                    f=f+'8';
                 }
             }
         });
@@ -148,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 text1.setText(text1.getText() + "9");
                 if(!Double.isNaN(oparant1)) {
-                    f=f+"9";
+                    f=f+'9';
                 }
             }
         });
@@ -157,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 text1.setText(text1.getText() + ".");
                 if(!Double.isNaN(oparant1)) {
-                    f=f+".";
+                    f=f+'.';
                 }
 
             }
@@ -168,14 +168,8 @@ public class MainActivity extends AppCompatActivity {
                 text1.setText("");
                 result.setText("");
                 f="";
-                temp=Double.NaN;
                 oparant1=Double.NaN;
-                activemul=false;
-                activediv=false;
-                activeadd=false;
-                activesub=false;
-                activemod=false;
-                activeroot=false;
+                oparant2=Double.NaN;
             }
         });
         buttonDel.setOnClickListener(new View.OnClickListener() {
@@ -186,7 +180,7 @@ public class MainActivity extends AppCompatActivity {
                     text1.setText(currentText.subSequence(0, currentText.length()-1));
                 }
                 else {
-                    temp = Double.NaN;
+                    oparant2 = Double.NaN;
                     oparant1 = Double.NaN;
                     text1.setText("");
                     result.setText("");
@@ -198,7 +192,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                oparant1=Double.parseDouble(text1.getText().toString());
+                oparant1=Double.parseDouble(text1.getText()+ "");
                 text1.setText(text1.getText()+"+");
                 activeadd=true;
 
@@ -208,7 +202,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                oparant1=Double.parseDouble(text1.getText().toString());
+                oparant1=Double.parseDouble(text1.getText()+" ");
                 text1.setText(text1.getText()+"-");
                 activesub=true;
 
@@ -218,7 +212,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                oparant1=Double.parseDouble(text1.getText().toString());
+                oparant1=Double.parseDouble(text1.getText()+" ");
                 text1.setText(text1.getText()+"*");
                 activemul=true;
 
@@ -228,7 +222,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                oparant1=Double.parseDouble(text1.getText().toString());
+                oparant1=Double.parseDouble(text1.getText()+"");
                 text1.setText(text1.getText()+"/");
                 activediv=true;
 
@@ -238,7 +232,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                oparant1=Double.parseDouble(text1.getText().toString());
+                oparant1=Double.parseDouble(text1.getText()+"");
                 text1.setText(text1.getText()+"%");
                 activemod=true;
 
@@ -248,7 +242,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                oparant1=Double.parseDouble(text1.getText().toString());
+                oparant1=Double.parseDouble(text1.getText()+"");
                 text1.setText(text1.getText()+"^");
                 activepow=true;
 
@@ -258,7 +252,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 activeroot=true;
-                text1.setText(text1.getText()+""+"√");
+                text1.setText(text1.getText()+"√");
             }
         });
         buttonEqual.setOnClickListener(new View.OnClickListener() {
@@ -267,6 +261,18 @@ public class MainActivity extends AppCompatActivity {
 
                 oparant2=Double.parseDouble(f);
                 cal();
+                if (activeroot == true) {
+                    oparant2 =oparant1;
+                    CharSequence s= text1.getText();
+                    s=s.subSequence(1,s.length());
+                    oparant1=Double.parseDouble(s+"");
+                    result.setText("ok");
+                    //tvExpression.setText(tvExpression.getText()+""+valueOne);
+                    oparant1 = Math.sqrt(oparant1);
+                    activeroot=false;
+                }
+
+
                 result.setText(oparant1+"");
                 oparant1=Double.NaN;
                 oparant2=Double.NaN;
@@ -293,11 +299,6 @@ public class MainActivity extends AppCompatActivity {
             else if (activemul == true) {
                 oparant1=this.oparant1*oparant2;
                 activemul=false;
-            }
-
-            else if (activeroot== true) {
-                oparant1=Math.sqrt(this.oparant1);
-                activeroot=false;
             }
             else if (activediv== true) {
                 oparant1 =this.oparant1/oparant2;
